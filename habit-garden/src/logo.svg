@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#e8f5e9"/>
+
+  <line x1="100" y1="150" x2="100" y2="90"
+        stroke="#4CAF50" stroke-width="8"/>
+
+  <ellipse cx="75" cy="100" rx="25" ry="15"
+           fill="#81C784"
+           transform="rotate(-30 75 100)"/>
+
+  <ellipse cx="125" cy="100" rx="25" ry="15"
+           fill="#81C784"
+           transform="rotate(30 125 100)"/>
+
+  <circle cx="100" cy="70" r="15"
+          fill="#FFD54F"/>
+
+  <text x="100" y="185"
+        font-size="18"
+        text-anchor="middle"
+        fill="#2E7D32">
+    Habit Garden
+  </text>
+</svg>

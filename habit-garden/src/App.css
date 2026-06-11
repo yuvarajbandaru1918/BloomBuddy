@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+
+  font-family: "Segoe UI", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #F8FFF4,
+    #EAF7E6
+  );
+
+  min-height: 100vh;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+form {
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.garden {
+  margin: 30px 0;
+}
+
+.plants {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plant {
+  font-size: 50px;
+}
+
+.habit-card {
+   background: white;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  margin: 15px auto;
+
+  width: 320px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+  border: 3px solid #F8BBD9;
+
+  z-index: 1000;
+
+  text-align: center;
+
+  animation: bloom 0.5s ease;
+}
+
+.login-page {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #F8FFF4,
+      #C8E6C9
+    );
+}
+
+.login-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.1);
+
+  text-align: center;
+}
+
+@keyframes bloom {
+  from {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.plant {
+  font-size: 60px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.creature {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.login-page {
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #F8FFF4,
+    #C8E6C9
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.login-card {
+  background: rgba(255,255,255,0.9);
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.1);
+
+  backdrop-filter: blur(10px);
+
+  width: 350px;
+}
+
+.login-card h1 {
+  color: #4E944F;
+}
+
+.login-card p {
+  color: #666;
+}
+
+.login-card input {
+  width: 90%;
+
+  padding: 12px;
+
+  margin: 15px 0;
+
+  border-radius: 12px;
+
+  border: 1px solid #A8D5BA;
+}
+
+.login-card button {
+  background: #7BC47F;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 12px 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  transform: scale(1.05);
+}
+
+.butterfly {
+  position: absolute;
+
+  font-size: 40px;
+
+  top: 20%;
+
+  left: 20%;
+
+  animation: fly 6s infinite ease-in-out;
+}
+
+.butterfly-2 {
+  top: 70%;
+  left: 75%;
+
+  animation-delay: 2s;
+}
+
+.bee {
+  position: absolute;
+
+  font-size: 35px;
+
+  top: 30%;
+  right: 20%;
+
+  animation: fly 5s infinite ease-in-out;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0,0);
+  }
+
+  25% {
+    transform: translate(30px,-20px);
+  }
+
+  50% {
+    transform: translate(0,-40px);
+  }
+
+  75% {
+    transform: translate(-30px,-20px);
+  }
+
+  100% {
+    transform: translate(0,0);
+  }
+}
