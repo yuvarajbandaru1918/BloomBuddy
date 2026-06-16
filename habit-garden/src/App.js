@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Login from "./components/Login";
+import UserProfile from "./components/UserProfile";
 import HabitForm from "./components/HabitForm";
 import HabitCard from "./components/HabitCard";
 import Garden from "./components/Garden";
@@ -7,12 +8,22 @@ import "./App.css";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState("");
   const [showCongrats, setShowCongrats] = useState(false);
 
   const [habits, setHabits] = useState(() => {
     const saved = localStorage.getItem("habits");
     return saved ? JSON.parse(saved) : [];
   });
+
+  useEffect(() => {
+    // Check if user is already logged in
+    const user = localStorage.getItem("currentUser");
+    if (user) {
+      setCurrentUser(user);
+      setLoggedIn(true);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("habits", JSON.stringify(habits));
@@ -55,16 +66,32 @@ function App() {
     );
   };
 
+  const handleLogout = () => {
+    setLoggedIn(false);
+    setCurrentUser("");
+  };
+
+  const handleLogin = () => {
+    const user = localStorage.getItem("currentUser");
+    setCurrentUser(user);
+    setLoggedIn(true);
+  };
+
   if (!loggedIn) {
     return (
       <Login
-        onLogin={() => setLoggedIn(true)}
+        onLogin={handleLogin}
       />
     );
   }
 
   return (
     <div className="app">
+
+      <UserProfile 
+        currentUser={currentUser} 
+        onLogout={handleLogout}
+      />
 
       {showCongrats && (
         <div className="popup">
