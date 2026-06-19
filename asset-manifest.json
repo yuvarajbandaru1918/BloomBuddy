@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BloomBuddy/static/css/main.e8eb138b.css",
+    "main.js": "/BloomBuddy/static/js/main.9dd90cfe.js",
+    "index.html": "/BloomBuddy/index.html",
+    "main.e8eb138b.css.map": "/BloomBuddy/static/css/main.e8eb138b.css.map",
+    "main.9dd90cfe.js.map": "/BloomBuddy/static/js/main.9dd90cfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8eb138b.css",
+    "static/js/main.9dd90cfe.js"
+  ]
+}
